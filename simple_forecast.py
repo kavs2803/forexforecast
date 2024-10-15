@@ -1,4 +1,3 @@
-# import necessary libraries
 
 import sys
 
@@ -18,9 +17,6 @@ from normalization_functions import simple_normalize
 dataset = pd.read_csv('data.csv')
 data = list(dataset['Price'].values)
 
-# =====================================================================================================================
-# ===== Helper functions ==============================================================================================
-# =====================================================================================================================
 
 def predict(inputs, weights):
     '''
@@ -94,9 +90,9 @@ def train_model(training_data, mu):
     :return: (list) containing optimized weights, which can be used for prediction
     '''
 
-    # This list will store weights, initially the weights will be zeros
+
     weights = [0, 0, 0]
-    # This list will store errors corresponding to each pattern
+
     errors = []
 
     # This loop optimizes the weights, such that error converges to zero
